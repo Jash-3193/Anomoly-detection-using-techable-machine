@@ -33,7 +33,15 @@ st.sidebar.success("Project by: Jash")
 def load_keras_model():
     labels_path = "labels.txt"
     model_path = "my_model"
-model_layer = keras.models.load_model(model_path)
+
+    # Load the labels
+    with open(labels_path, "r") as f:
+        labels = [line.strip().split(maxsplit=1)[1] for line in f if line.strip()]
+
+    # Load the SavedModel as a Keras Layer
+    model_layer = keras.layers.TFSMLayer(model_path, call_endpoint='serving_default')
+    return model_layer, labels
+
 
 
     # Load the labels
