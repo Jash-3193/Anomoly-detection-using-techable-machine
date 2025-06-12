@@ -23,7 +23,9 @@ st.sidebar.success("Project by: Jash")
 @st.cache_resource
 def load_keras_model():
     labels_path = "labels.txt"
-    model_path = "my_model"
+    model_path = "my_model.h5"
+model_layer = keras.models.load_model(model_path)
+
 
     # Load the labels
     with open(labels_path, "r") as f:
