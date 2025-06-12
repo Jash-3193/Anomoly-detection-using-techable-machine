@@ -107,11 +107,14 @@ else:
     st.header("Example Cases")
     st.write("No image uploaded yet. Check out these examples of Good and Defective bottles:")
     col1, col2 = st.columns(2)
+    
     with col1:
-    st.subheader("Good (With Cap)")
-    st.image("good.png", caption="A bottle with a cap.")
-with col2:
-    st.subheader("Defective (No Cap)")
-    st.image("defective.png", caption="A bottle without a cap.")
+        st.subheader("Good (With Cap)")
+        st.image("good.png", caption="A bottle with a cap.")
+    
+    with col2:
+        st.subheader("Defective (No Cap)")
+        st.image("defective.png", caption="A bottle without a cap.")
+
 
         
