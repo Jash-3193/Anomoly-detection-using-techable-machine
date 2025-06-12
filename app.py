@@ -23,7 +23,7 @@ st.sidebar.success("Project by: Jash")
 @st.cache_resource
 def load_keras_model():
     labels_path = "labels.txt"
-    model_path = "my_model.h5"
+    model_path = "my_model"
 model_layer = keras.models.load_model(model_path)
 
 
@@ -91,8 +91,10 @@ else:
     st.write("No image uploaded yet. Check out these examples of Good and Defective bottles:")
     col1, col2 = st.columns(2)
     with col1:
-        st.subheader("Good (With Cap)")
-        st.image("good_example.jpeg", caption="A bottle with a cap.")
-    with col2:
-        st.subheader("Defective (No Cap)")
-        st.image("defective_example.jpeg", caption="A bottle without a cap.")
+    st.subheader("Good (With Cap)")
+    st.image("good.png", caption="A bottle with a cap.")
+with col2:
+    st.subheader("Defective (No Cap)")
+    st.image("defective.png", caption="A bottle without a cap.")
+
+        
