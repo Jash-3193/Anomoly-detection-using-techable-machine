@@ -1,3 +1,12 @@
+import zipfile
+import os
+
+# --- UNZIP THE MODEL IF NOT ALREADY DONE ---
+if not os.path.exists("my_model"):
+    with zipfile.ZipFile("my_model.zip", "r") as zip_ref:
+        zip_ref.extractall("my_model")
+
+
 import streamlit as st
 from PIL import Image
 import numpy as np
