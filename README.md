@@ -20,6 +20,5 @@ Exported as TensorFlow SavedModel.
 Input shape: (224, 224, 3)
 
 Two output classes:
-
 0 Good
 1 Defective
